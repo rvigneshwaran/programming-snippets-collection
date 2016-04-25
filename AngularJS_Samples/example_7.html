@@ -1,0 +1,13 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="quality=5;cost=30;firstName='Vigneshwaran';lastName='Rethenasekaran';person={Company:'Amazon',Country:'India'};
+arrayString=[12,22,12,14,15,18,78,89]">
+  <p> Play on Numbers :: <input type="text" value="{{quality * cost}}"> </p>
+  <p> Play With Strings :: <input type="text" value="{{ firstName + ' ' + lastName }}" style="width:200px;"> </p>
+  <p> Play On Objects :: <input type="text" value="{{ person.Company + ' ' + person.Country }}" style="width:200px;"> </p>
+  <p> Play On Arrays :: <input type="text" value="Element in 3rd Index is {{ arrayString [2] }}" style="width:400px;"> </p>
+</div>
+
+</body>
