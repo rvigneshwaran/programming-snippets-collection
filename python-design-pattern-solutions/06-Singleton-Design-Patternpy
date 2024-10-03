@@ -1,0 +1,26 @@
+def is_singleton(factory):
+    # Call the factory method twice
+    obj1 = factory()
+    obj2 = factory()
+    
+    # Check if both objects are the same instance (same memory location)
+    return obj1 is obj2
+
+# Example usage:
+class Singleton:
+    _instance = None
+
+    @classmethod
+    def get_instance(cls):
+        if cls._instance is None:
+            cls._instance = Singleton()
+        return cls._instance
+
+class NonSingleton:
+    pass
+
+# Test for Singleton
+print(is_singleton(Singleton.get_instance))  # Output: True (since it's a singleton)
+
+# Test for Non-Singleton
+print(is_singleton(NonSingleton))  # Output: False (different instances every time)
